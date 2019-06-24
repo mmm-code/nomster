@@ -78,3 +78,6 @@ gem 'will_paginate', '~> 3.1.1'
 
 # Nomster L13
 gem 'simple_form'
+
+#Nomster L15
+gem 'font-awesome-rails'
