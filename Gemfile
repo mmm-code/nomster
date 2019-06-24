@@ -75,3 +75,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # https://github.com/mislav/will_paginate
 # http://railscasts.com/episodes/51-will-paginate-revised?view=asciicast
 gem 'will_paginate', '~> 3.1.1'
+
+# Nomster L13
+gem 'simple_form'
