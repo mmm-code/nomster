@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+
 # Nomster L7 install jQuery
 gem 'jquery-rails'
 # Nomster L7 install popper and bootstrap
@@ -69,3 +70,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Nomster L12 will_paginate
+# https://github.com/mislav/will_paginate
+# http://railscasts.com/episodes/51-will-paginate-revised?view=asciicast
+gem 'will_paginate', '~> 3.1.1'

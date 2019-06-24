@@ -35,3 +35,16 @@ body {
   font-family: 'introrustg-base2line', cursive;
   font-size:26px;
 }
+
+.pagination {
+  height: 22px;
+  a, span, em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
+  }
+  .disabled {
+    display: none;
+  }
+}

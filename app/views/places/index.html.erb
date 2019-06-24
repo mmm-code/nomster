@@ -1,5 +1,21 @@
 <h1><% @places.each do |place| %></h1>
 
+<% if false %>
+# This is a comment
+# Nomster L12 
+# http://railscasts.com/episodes/51-will-paginate-revised?view=asciicast
+# https://github.com/mislav/will_paginate
+# render page links in the view:
+# or, use an explicit "per page" limit:
+# Post.paginate(page: params[:page], per_page: 3)
+
+# render page links in the view:
+<% end %>
+
+
+<%= will_paginate @places, previous_label: h("<"), next_label: h(">") %>
+
+<% for place in @places %>
   
   <div class="booyah-box col-10 offset-1">
     <h1><%= place.name %></h1><br />
@@ -8,3 +24,6 @@
   </div>
 
 <% end %>
+<% end %>
+
+
