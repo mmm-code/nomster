@@ -81,3 +81,6 @@ gem 'simple_form'
 
 #Nomster L15
 gem 'font-awesome-rails'
+
+#Nomster L16
+gem 'devise'
