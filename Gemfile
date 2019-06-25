@@ -84,3 +84,9 @@ gem 'font-awesome-rails'
 
 #Nomster L16
 gem 'devise'
+
+#Nomster L29
+gem 'geocoder'
+
+#Nomster L29
+gem 'figaro'
