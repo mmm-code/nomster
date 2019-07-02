@@ -79,14 +79,17 @@ gem 'will_paginate', '~> 3.1.1'
 # Nomster L13
 gem 'simple_form'
 
-#Nomster L15
+# Nomster L15
 gem 'font-awesome-rails'
 
-#Nomster L16
+# Nomster L16
 gem 'devise'
 
-#Nomster L29
+# Nomster L29
 gem 'geocoder'
 
-#Nomster L29
+# Nomster L29
 gem 'figaro'
+
+# Nomster L39
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
