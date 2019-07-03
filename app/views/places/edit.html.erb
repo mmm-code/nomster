@@ -4,7 +4,16 @@
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :description %>
+    <%= f.file_field :image %>
+    <%= f.label :remote_image_url, "or image URL" %>
+    <%= f.text_field :remote_image_url %>
     <br />
     <%= f.submit 'Update', class: 'btn btn-primary' %>
+   <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
   <% end %>
+  
 </div>
