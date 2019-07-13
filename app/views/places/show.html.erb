@@ -13,15 +13,7 @@
       padding: 0;
     }
   </style>
-  <%= simple_form_for @photo do |f| %>
-        <div class="modal-body">
-            <%= f.input :caption %>
-          </div>
-          <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <%= f.submit "Add a Caption", class: 'btn btn-primary'%>
-        </div>
-      <% end %>
+  
   <% if @place.latitude.present? && @place.longitude.present? %>
   
     <script>
