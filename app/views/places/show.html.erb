@@ -4,7 +4,8 @@
 <br/><br/>
 <p><%= @place.description %></p>
   <%= image_tag @place.image_url.to_s %>
-  
+  <br/>
+  <br/>
    <style>
     html, body {
       height: 100%;
@@ -12,7 +13,15 @@
       padding: 0;
     }
   </style>
-  
+  <%= simple_form_for @photo do |f| %>
+        <div class="modal-body">
+            <%= f.input :caption %>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <%= f.submit "Add a Caption", class: 'btn btn-primary'%>
+        </div>
+      <% end %>
   <% if @place.latitude.present? && @place.longitude.present? %>
   
     <script>
@@ -71,14 +80,14 @@
         <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
       </div>
       <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
-      <div class="modal-body">
-          <%= f.input :message %>
-          <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+        <div class="modal-body">
+            <%= f.input :message %>
+            <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <%= f.submit "Add a Comment", class: 'btn btn-primary'%>
         </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <%= f.submit "Add a Comment", class: 'btn btn-primary'%>
-      </div>
       <% end %>
       
     </div>
