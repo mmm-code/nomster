@@ -1,0 +1,55 @@
+$ git add --all
+
+git commit -am "Add a good message "
+
+git push origin master
+
+git status
+
+restart server
+
+$ git push heroku master
+
+$ heroku run rake db:migrate
+
+$ heroku restart
+
+To easily see our heroku url we can type:
+
+$ heroku apps:info
+
+
+error
+
+wanted to add name
+app/views/users/show.html.erb
+
+<h1><%= @user.name %></h1>
+<br/>
+<h1><%= @user.email %></h1>
+<br/>
+<h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+<br/>
+<h4><%= @user.comments.count %> total commets</h4>
+
+gives error
+
+I have narrowed down the location of the duplication bug
+when I added 
+
+<div class="booyah-box">
+  <h1><%= @user.email %></h1>
+  <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+  <h4><%= @user.comments.count %> total comments</h4>
+  <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
+</div>
+
+app/views/users/show.html.erb
+
+it duplicated my dashboard
+
+when I added <%= image_tag 'user.png' %> to show.html.erb, it only displayed in the bottom box
+
+the dashboard with the icon does not reflect the breaks I added to the dashboard
+neither does the rogue dashboard show the breaks either
+
